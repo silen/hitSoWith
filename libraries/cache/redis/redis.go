@@ -37,8 +37,8 @@ import (
 	"time"
 
 	"github.com/gomodule/redigo/redis"
+	"github.com/silen/hitSoWith/libraries/cache"
 
-	"gitlab.sys.hxsapp.net/isp/isp-common-go.git/libraries/cache"
 	"strings"
 )
 

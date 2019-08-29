@@ -12,15 +12,10 @@ import (
 	"time"
 
 	"github.com/astaxie/beego"
-	"gitlab.sys.hxsapp.net/isp/isp-common-go.git/libraries/conf"
-	"gitlab.sys.hxsapp.net/isp/isp-common-go.git/libraries/utils"
+	"github.com/silen/hitSoWith/libraries/conf"
 )
 
 func init() {
-	//在服务器上每次启动都为守护程序systemd记录一下pid
-	if beego.BConfig.RunMode != "dev" {
-		//writePidInFile()
-	}
 
 	//期望输出调用的文件名和文件行号
 	beego.BeeLogger.EnableFuncCallDepth(true)
@@ -66,7 +61,7 @@ func init() {
 	beego.BeeLogger.Info("====BEEGO_RUNMODE===" + beego.BConfig.RunMode + "====" + conf.Config.Get("runmode"))
 	beego.BeeLogger.Info("===============set log config success!==========")
 	beego.BeeLogger.Info("=========filename:" + filename + "=========")
-	utils.SetGoStartUpTime()
+
 }
 
 func makePathExists(filepath string) {

@@ -7,7 +7,8 @@ package convert
 // @Desc: .....
 import (
 	"encoding/json"
-	"hitSoWith/libraries/utils"
+
+	"github.com/silen/hitSoWith/libraries/utils"
 
 	"github.com/astaxie/beego/logs"
 	"github.com/fatih/structs"

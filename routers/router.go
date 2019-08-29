@@ -9,7 +9,7 @@
 package routers
 
 import (
-	"hitSoWith/controllers"
+	"github.com/silen/hitSoWith/controllers"
 
 	"github.com/astaxie/beego"
 )

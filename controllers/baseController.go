@@ -10,7 +10,6 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/shunfei/cronsun/conf"
-	//_ "github.com/mbobakov/grpc-consul-resolver"
 )
 
 //BaseController controller 基类

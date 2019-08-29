@@ -2,9 +2,10 @@ package doinit
 
 import (
 	"fmt"
-	"hitSoWith/libraries/cache"
 
-	"hitSoWith/libraries/conf"
+	"github.com/silen/hitSoWith/libraries/cache"
+
+	"github.com/silen/hitSoWith/libraries/conf"
 
 	"github.com/astaxie/beego/logs"
 )
