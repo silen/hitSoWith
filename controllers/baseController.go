@@ -9,7 +9,7 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
-	"github.com/shunfei/cronsun/conf"
+	"github.com/silen/hitSoWith/libraries/conf"
 )
 
 //BaseController controller 基类
