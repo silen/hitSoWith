@@ -62,12 +62,12 @@ func (c *BaseController) CheckLogin() {
 
 }
 
-//Msg 错误输出
-func (c *BaseController) Msg(code int, message string) {
+//Message 消息输出
+func (c *BaseController) Message(code int, message string) {
 	c.ReturnJSON(map[string]interface{}{
 		"code": code,
 		"msg":  message,
-		"data": map[string]string{},
+		"data": make([]string, 0),
 	})
 }
 
