@@ -65,10 +65,9 @@ func (c *BaseController) CheckLogin() {
 //Message 消息输出
 func (c *BaseController) Message(code int, message string) {
 	c.ReturnJSON(map[string]interface{}{
-		"code": code,
-		"msg":  message,
-		"data": make([]string, 0),
-	})
+		"status": code,
+		"data":   make([]string, 0),
+	}, message)
 }
 
 //ReturnJSON 指定格式输出
