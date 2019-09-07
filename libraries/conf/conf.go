@@ -8,6 +8,7 @@ package conf
 
 import (
 	"os"
+	"strconv"
 
 	"github.com/astaxie/beego"
 )
@@ -53,6 +54,15 @@ func (c *Conf) Get(key string) (v string) {
 		if vv, exists := (*c)[key]; exists {
 			v = vv
 		}
+	}
+	return
+}
+
+//GetInt 根据key获取int值
+func (c *Conf) GetInt(key string) (v int) {
+	v, err := strconv.Atoi(c.Get(key))
+	if err != nil {
+		v = 0
 	}
 	return
 }
