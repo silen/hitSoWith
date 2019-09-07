@@ -8,13 +8,12 @@ package convert
 import (
 	"encoding/json"
 
-	"github.com/silen/hitSoWith/libraries/utils"
-
 	"github.com/astaxie/beego/logs"
 	"github.com/fatih/structs"
 	"github.com/jinzhu/copier"
 	"github.com/mitchellh/mapstructure"
 	"github.com/pkg/errors"
+	"gitlab.sys.hxsapp.net/isp/isp-common-go.git/libraries/utils"
 )
 
 //StringToJSON string 转json
