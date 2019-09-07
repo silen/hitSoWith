@@ -13,7 +13,6 @@ import (
 	"github.com/jinzhu/copier"
 	"github.com/mitchellh/mapstructure"
 	"github.com/pkg/errors"
-	"gitlab.sys.hxsapp.net/isp/isp-common-go.git/libraries/utils"
 )
 
 //StringToJSON string 转json
@@ -21,9 +20,7 @@ func StringToJSON(str string) (m map[string]interface{}) {
 	m = map[string]interface{}{}
 	if str != "" {
 		if err := json.Unmarshal([]byte(str), &m); err != nil {
-			logs.Error(err, "string to json failed!----"+utils.TrimLinefeed(str),
-				utils.GetlastStepFileInfoForLogs(3),
-				utils.GetlastStepFileInfoForLogs(4))
+			logs.Error(err, "string to json failed!----")
 		}
 	}
 	return
@@ -39,10 +36,7 @@ func JSONStringToStruct(jsonString string, structObject interface{}) error {
 func MapToStruct(mapdata map[string]interface{}, structObject interface{}) (err error) {
 	//将 map 转换为指定的结构体
 	if err = mapstructure.Decode(mapdata, structObject); err != nil {
-		logs.Error(mapdata, "--map[string]interface to struct failed--", utils.TrimLinefeed(err.Error()),
-			utils.GetlastStepFileInfoForLogs(3),
-			utils.GetlastStepFileInfoForLogs(4),
-			utils.GetlastStepFileInfoForLogs(5))
+		logs.Error(mapdata, "--map[string]interface to struct failed--")
 	}
 	return
 }
@@ -58,9 +52,7 @@ func CacheDataToStruct(data interface{}, structObject interface{}) error {
 		return MapToStruct(v, structObject)
 	}
 
-	logs.Error(data, "--cachedata convert to map[string]interface faild",
-		utils.GetlastStepFileInfoForLogs(3),
-		utils.GetlastStepFileInfoForLogs(4))
+	logs.Error(data, "--cachedata convert to map[string]interface faild")
 	return errors.New("convert to map[string]interface faild")
 }
 
