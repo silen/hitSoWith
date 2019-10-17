@@ -6,6 +6,9 @@ import (
 	"github.com/astaxie/beego/logs"
 	"github.com/silen/hitSoWith/libraries/cache"
 	"github.com/silen/hitSoWith/libraries/conf"
+
+	//导入框架定制的redis
+	_ "github.com/silen/hitSoWith/libraries/cache/redis"
 )
 
 var (
