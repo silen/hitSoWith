@@ -3,11 +3,9 @@ package doinit
 import (
 	"fmt"
 
-	"github.com/silen/hitSoWith/libraries/cache"
-
-	"github.com/silen/hitSoWith/libraries/conf"
-
 	"github.com/astaxie/beego/logs"
+	"github.com/silen/hitSoWith/libraries/cache"
+	"github.com/silen/hitSoWith/libraries/conf"
 )
 
 var (
