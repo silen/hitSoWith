@@ -44,7 +44,7 @@ import (
 
 var (
 	// DefaultKey the collection name of redis for cache adapter.
-	DefaultKey = "xyRDS"
+	DefaultKey = "hitSoWithRDS"
 )
 
 // Cache is Redis cache adapter.
@@ -76,10 +76,6 @@ func (rc *Cache) do(commandName string, args ...interface{}) (reply interface{},
 
 // associate with config key.
 func (rc *Cache) associate(originKey interface{}) string {
-	//这他妈的会在所有key面前拼前缀！！
-	//这样其它栈如果共同操作就要适配这个前缀，算了。。。注释掉
-	//acol	2019-04-16
-	//return fmt.Sprintf("%s:%s", rc.key, originKey)
 	return fmt.Sprintf("%s", originKey)
 }
 

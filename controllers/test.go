@@ -17,7 +17,6 @@ type Test struct {
 //So So
 func (c *Test) So() {
 	var i = 1000000000000000000 //int最大18个0
-	logs.Alert("So, hit So With", i)
-
-	c.ReturnJSON("So")
+	logs.Alert("So！, hit So With", i)
+	c.ReturnJSON("唯一纯白的茉莉花～ biu ")
 }
